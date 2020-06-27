@@ -19,6 +19,8 @@ class ListNode:
         self.next = None
 
 class Solution:
+    def test(self):
+        pass
     def addTwoNumbers(self, l1, l2):
         n1=0
         while l1!= None:
