@@ -19,34 +19,29 @@ class ListNode:
         self.next = None
 
 class Solution:
-    def test(self):
-        pass
     def addTwoNumbers(self, l1, l2):
-        n1=0
-        while l1!= None:
-            n1 *= 10
-            n1+=l1.val
-            l1=l1.next
-        n2 = 0
-        while l2 != None:
-            n2 *= 10
-            n2 += l2.val
+        if not l1 and not l2:
+            return None
+
+        l1_num = 0
+        while l1:
+        l1_num = l1_num * 10 + l1.val
+        l1 = l1.next
+
+        l2_num = 0
+        while l2:
+            l2_num = l2_num * 10 + l2.val
             l2 = l2.next
-        print(n2)
-        n1=n1+n2
-        n1=str(n1)
-        start=None
-        for i in n1:
-            l=ListNode(int(i))
-            if start==None:
-                l.next=None
-                start=l
-            else:
-                l.next=start
-                start=l
-        # return start
 
+        lsum = l1_num + l2_num
 
+        head = ListNode(None)
+        cur = head
+        for istr in str(lsum):
+            cur.next = ListNode(int(istr))
+            cur = cur.next
+
+        return head.next
 
 A=Solution()
 l1=ListNode(5)
