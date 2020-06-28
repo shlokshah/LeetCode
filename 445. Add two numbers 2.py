@@ -25,8 +25,8 @@ class Solution:
 
         l1_num = 0
         while l1:
-        l1_num = l1_num * 10 + l1.val
-        l1 = l1.next
+            l1_num = l1_num * 10 + l1.val
+            l1 = l1.next
 
         l2_num = 0
         while l2:
